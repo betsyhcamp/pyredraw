@@ -238,6 +238,20 @@ test-minimal = ["pytest"]
 test-no-codebase = ["pytest", "matplotlib", "pillow"]
 
 [[package]]
+name = "coverage"
+version = "6.5.0"
+description = "Code coverage measurement for Python"
+category = "dev"
+optional = false
+python-versions = ">=3.7"
+
+[package.dependencies]
+tomli = {version = "*", optional = true, markers = "python_full_version <= \"3.11.0a6\" and extra == \"toml\""}
+
+[package.extras]
+toml = ["tomli"]
+
+[[package]]
 name = "cycler"
 version = "0.11.0"
 description = "Composable style cycles"
@@ -1199,6 +1213,21 @@ tomli = {version = ">=1.0.0", markers = "python_version < \"3.11\""}
 testing = ["argcomplete", "hypothesis (>=3.56)", "mock", "nose", "pygments (>=2.7.2)", "requests", "xmlschema"]
 
 [[package]]
+name = "pytest-cov"
+version = "4.0.0"
+description = "Pytest plugin for measuring coverage."
+category = "dev"
+optional = false
+python-versions = ">=3.6"
+
+[package.dependencies]
+coverage = {version = ">=5.2.1", extras = ["toml"]}
+pytest = ">=4.6"
+
+[package.extras]
+testing = ["fields", "hunter", "process-tests", "six", "pytest-xdist", "virtualenv"]
+
+[[package]]
 name = "python-dateutil"
 version = "2.8.2"
 description = "Extensions to the standard Python datetime module"
@@ -1715,7 +1744,7 @@ testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "flake8 (<5)", "pytest-co
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.9"
-content-hash = "9cf7da2bc73cb772ad01766c9d31c06099ce26359afac8455657079be8acc7e1"
+content-hash = "7fe2963232cf31a2c95548c6c6cdc9afd270f0054ba793ab71f27407a57257e7"
 
 [metadata.files]
 alabaster = []
@@ -1737,6 +1766,7 @@ click = []
 colorama = []
 comm = []
 contourpy = []
+coverage = []
 cycler = []
 debugpy = []
 decorator = []
@@ -1806,6 +1836,7 @@ pygments = []
 pyparsing = []
 pyrsistent = []
 pytest = []
+pytest-cov = []
 python-dateutil = []
 pytz = []
 pywin32 = []
