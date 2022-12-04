@@ -1,7 +1,34 @@
 import numpy as np
 
 def moving_block_bootstrap(data_array, block_window_length, seed=1027):
-    """Select sample of blocks from an input time series array via moving block bootstrap"""
+    """Select sample of blocks from input time series array via moving block bootstrap.
+
+    Parameters
+    ----------
+    data_array: list, pandas Series, numpy ndarray (1D)
+        Time series data on which user would like perform moving block bootstrap.
+    
+    block_window_length: int or float
+        Number of data points in a block bootstrap sample. Length of block sample. If 
+        input is float, will be converted to integer.
+    
+    seed: int
+        Value of random seed for random number generator for reproducibility. 
+        Default value of random seed is 1027 which will be used if no value 
+        is provided.  
+
+    Returns
+    -------
+    numpy ndarray (1D)
+        Moving block boostrap result from input data_array. Result is same length
+        as input data given by data_array.
+
+    Examples
+    --------
+    >>> data_array = [1,2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+    >>> block_window_length = 3
+    >>> moving_block_bootstrap(data_array, block_window_length, seed=1027)
+    """
     
     # make input data into numpy array (lists and pandas Series acceptable input types)
     data_array = np.array(data_array)
