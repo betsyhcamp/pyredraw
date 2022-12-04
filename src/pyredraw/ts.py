@@ -25,6 +25,12 @@ def moving_block_selection(data_array, block_window_length):
     >>> data_array = [1,2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
     >>> block_window_length = 3
     >>> moving_block_selection(data_array, block_window_length)
+    
+    References
+    ---------- 
+    Bergmeir C., Hyndman R.J., Benitez J.M.: Bagging exponential smoothing methods 
+    using STL decomposition and Box-cox Transformation. International Journal of 
+    Forecasting, 32(2):303-312, (2016)
     """
 
     # number of blocks to choose and create array of this length to iterate through
