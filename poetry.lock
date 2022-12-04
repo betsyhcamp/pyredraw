@@ -141,6 +141,28 @@ html5lib = ["html5lib"]
 lxml = ["lxml"]
 
 [[package]]
+name = "black"
+version = "22.10.0"
+description = "The uncompromising code formatter."
+category = "dev"
+optional = false
+python-versions = ">=3.7"
+
+[package.dependencies]
+click = ">=8.0.0"
+mypy-extensions = ">=0.4.3"
+pathspec = ">=0.9.0"
+platformdirs = ">=2"
+tomli = {version = ">=1.1.0", markers = "python_full_version < \"3.11.0a7\""}
+typing-extensions = {version = ">=3.10.0.0", markers = "python_version < \"3.10\""}
+
+[package.extras]
+colorama = ["colorama (>=0.4.3)"]
+d = ["aiohttp (>=3.7.4)"]
+jupyter = ["ipython (>=7.8.0)", "tokenize-rt (>=3.2.0)"]
+uvloop = ["uvloop (>=0.15.2)"]
+
+[[package]]
 name = "bleach"
 version = "5.0.1"
 description = "An easy safelist-based HTML-sanitizing tool."
@@ -331,6 +353,19 @@ python-versions = "*"
 
 [package.extras]
 devel = ["colorama", "jsonschema", "json-spec", "pylint", "pytest", "pytest-benchmark", "pytest-cache", "validictory"]
+
+[[package]]
+name = "flake8"
+version = "6.0.0"
+description = "the modular source code checker: pep8 pyflakes and co"
+category = "dev"
+optional = false
+python-versions = ">=3.8.1"
+
+[package.dependencies]
+mccabe = ">=0.7.0,<0.8.0"
+pycodestyle = ">=2.10.0,<2.11.0"
+pyflakes = ">=3.0.0,<3.1.0"
 
 [[package]]
 name = "fonttools"
@@ -758,6 +793,14 @@ python-versions = ">=3.5"
 traitlets = "*"
 
 [[package]]
+name = "mccabe"
+version = "0.7.0"
+description = "McCabe checker, plugin for flake8"
+category = "dev"
+optional = false
+python-versions = ">=3.6"
+
+[[package]]
 name = "mdit-py-plugins"
 version = "0.3.1"
 description = "Collection of plugins for markdown-it-py"
@@ -785,6 +828,14 @@ python-versions = ">=3.7"
 name = "mistune"
 version = "2.0.4"
 description = "A sane Markdown parser with useful plugins and renderers"
+category = "dev"
+optional = false
+python-versions = "*"
+
+[[package]]
+name = "mypy-extensions"
+version = "0.4.3"
+description = "Experimental type system extensions for programs checked with the mypy typechecker."
 category = "dev"
 optional = false
 python-versions = "*"
@@ -1052,6 +1103,14 @@ qa = ["flake8 (==3.8.3)", "mypy (==0.782)"]
 testing = ["docopt", "pytest (<6.0.0)"]
 
 [[package]]
+name = "pathspec"
+version = "0.10.2"
+description = "Utility library for gitignore style pattern matching of file paths."
+category = "dev"
+optional = false
+python-versions = ">=3.7"
+
+[[package]]
 name = "pexpect"
 version = "4.8.0"
 description = "Pexpect allows easy control of interactive console applications."
@@ -1167,6 +1226,14 @@ optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 
 [[package]]
+name = "pycodestyle"
+version = "2.10.0"
+description = "Python style guide checker"
+category = "dev"
+optional = false
+python-versions = ">=3.6"
+
+[[package]]
 name = "pycparser"
 version = "2.21"
 description = "C parser in Python"
@@ -1181,6 +1248,14 @@ description = "PyDev.Debugger (used in PyDev, PyCharm and VSCode Python)"
 category = "dev"
 optional = false
 python-versions = "*"
+
+[[package]]
+name = "pyflakes"
+version = "3.0.1"
+description = "passive checker of Python programs"
+category = "dev"
+optional = false
+python-versions = ">=3.6"
 
 [[package]]
 name = "pygments"
@@ -1764,7 +1839,7 @@ testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "flake8 (<5)", "pytest-co
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.9"
-content-hash = "e3b19562c42bc1847ef25888cbdf6e8c5606f30303ecf60a0aaba3fcb929c22e"
+content-hash = "9a9137c1ebfe908ce91f0c423514e166e43786ac752b4b2ad12048d647a1ffd9"
 
 [metadata.files]
 alabaster = []
@@ -1778,6 +1853,7 @@ attrs = []
 babel = []
 backcall = []
 beautifulsoup4 = []
+black = []
 bleach = []
 certifi = []
 cffi = []
@@ -1796,6 +1872,7 @@ entrypoints = []
 exceptiongroup = []
 executing = []
 fastjsonschema = []
+flake8 = []
 fonttools = []
 greenlet = []
 idna = []
@@ -1823,9 +1900,11 @@ markdown-it-py = []
 markupsafe = []
 matplotlib = []
 matplotlib-inline = []
+mccabe = []
 mdit-py-plugins = []
 mdurl = []
 mistune = []
+mypy-extensions = []
 myst-nb = []
 myst-parser = []
 nbclassic = []
@@ -1840,6 +1919,7 @@ packaging = []
 pandas = []
 pandocfilters = []
 parso = []
+pathspec = []
 pexpect = []
 pickleshare = []
 pillow = []
@@ -1851,8 +1931,10 @@ psutil = []
 ptyprocess = []
 pure-eval = []
 py = []
+pycodestyle = []
 pycparser = []
 pydevd = []
+pyflakes = []
 pygments = []
 pyparsing = []
 pyrsistent = []
