@@ -7,10 +7,11 @@ A python package for resampling statistical operations
 ```bash
 $ pip install pyredraw
 ```
+Package available on PyPI at https://pypi.org/project/pyredraw/
 
 ## Usage
 
-- TODO
+- For example usage see `pyredraw/docs/example.ipynb` with documentation available at https://pyredraw.readthedocs.io/en/latest/
 
 ## Contributing
 
@@ -22,4 +23,4 @@ Interested in contributing? Check out the contributing guidelines. Please note t
 
 ## Credits
 
-`pyredraw` was created with [`cookiecutter`](https://cookiecutter.readthedocs.io/en/latest/) and the `py-pkgs-cookiecutter` [template](https://github.com/py-pkgs/py-pkgs-cookiecutter).
+A big thank you goes to Tomas Beuzan and Tiffany Timbers for their book Python Packages which can be found at https://py-pkgs.org . This resource was invaluable in creating `pyredraw` 
