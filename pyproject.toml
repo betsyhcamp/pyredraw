@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "pyredraw"
-version = "0.1.0"
+version = "0.2.1"
 description = "A python package for resampling statistical operations"
 authors = ["Elizabeth H. Camp"]
 license = "MIT"
