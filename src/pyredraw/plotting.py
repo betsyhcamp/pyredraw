@@ -34,6 +34,27 @@ def plot_words(word_counts, n=10):
  
     
 def plot_replicates(original_series, replicates_df, field_name, num_replicates=10):
+    """Plot lines to compare original time series to replicate time series.
+    
+    Parameters
+    ----------
+    original_series : pandas.Series
+        Pandas series with original time series. Index should be datetime
+    replicates_df : pandas.DataFrame
+        Pandas dataframe with field_name to be plotted and field called "replicate". 
+        Index should be datetime.
+    num_replicates : int, optional
+        Plot the first num_replicates. By default, 10.
+
+    Returns
+    -------
+    Nothing returned
+
+    Examples
+    --------
+    >>> from pyredraw.plotting import plot_replicates
+    >>> plot_replicates(original_series, replicates_df, "monthly_expenditures")
+    """
     # to set the plot size
     plt.figure(figsize=(16, 8))
     
