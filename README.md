@@ -11,7 +11,7 @@ Package available on PyPI at https://pypi.org/project/pyredraw/
 
 ## Usage
 
-- For example usage see `pyredraw/docs/example.ipynb` with documentation available at https://pyredraw.readthedocs.io/en/latest/
+- For example usage see `pyredraw/docs/example.ipynb` with documentation available at https://pyredraw.readthedocs.io/en/stable/
 
 ## Contributing
 
